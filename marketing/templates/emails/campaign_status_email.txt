@@ -1,0 +1,11 @@
+Campaign "{{ campaign.name }}" status update.
+
+Status: {{ status }}
+Details: {{ details|default:"No additional details" }}
+
+Summary Metrics:
+- Sent: {{ campaign.metrics.sent|default:0 }}
+- Opened: {{ campaign.metrics.opened|default:0 }}
+- Clicked: {{ campaign.metrics.clicked|default:0 }}
+
+View dashboard: {{ dashboard_url|default:"" }}
